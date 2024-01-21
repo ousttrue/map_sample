@@ -28,16 +28,16 @@ const osm: StyleSpecification = {
 //   <Map style={osm} center={[139.8, 35.5]} zoom={10} />
 // );
 
-const baseUrl = import.meta.env.DEV
-  ? window.location.origin
-  : "https://ousttrue.github.io/map_sample";
+const tileUrl = import.meta.env.DEV
+  ? window.location.origin + "/tiles/{z}/{x}/{y}.pbf.gz"
+  : "https://ousttrue.github.io/map_sample/tiles/{z}/{x}/{y}.pbf";
 
 const ne: StyleSpecification = {
   version: 8,
   sources: {
     NaturalEarth: {
       type: "vector",
-      tiles: [`${baseUrl}/tiles/{z}/{x}/{y}.pbf.gz`],
+      tiles: [tileUrl],
       minzoom: 0,
       maxzoom: 7,
     },
