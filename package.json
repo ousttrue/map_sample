@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "npx ladle serve"
+    "dev": "npx ladle serve",
+    "build": "npx ladle build"
   },
   "keywords": [],
   "author": "",
