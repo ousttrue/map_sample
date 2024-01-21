@@ -3,6 +3,7 @@ import { UserConfig } from "@ladle/react";
 
 const config: UserConfig = {
   // viteConfig: process.cwd() + "/ladle-vite.config.ts",
+  base: "/map_sample/",
 };
 
 export default config;
