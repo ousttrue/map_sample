@@ -38,7 +38,10 @@ jobs:
       - name: build
         run: npm run build
       - name: decompress
-        run: find build/tiles -name "*.pbf.gz" | xargs gzip -d
+        run: |
+          sudo apt-get install rename
+          find build/tiles -name "*.pbf.gz" -and -size 0 | xargs rename "s/.gz$//"
+          find build/tiles -name "*.pbf.gz" | xargs gzip -d
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - name: Upload artifact
