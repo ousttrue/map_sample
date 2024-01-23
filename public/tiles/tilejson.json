@@ -1,0 +1,13 @@
+{
+  "tilejson":"2.0.0",
+  "name":"naturalearth",
+  "minzoom":0,
+  "maxzoom":7,
+  "bounds":[-180, -85.0511, 180, 85.0511],
+  "format":"pbf",
+  "type":"baselayer",
+  "center":[0, 0, 0],
+  "tiles":[
+    "http://localhost:61000/tiles/{z}/{x}/{y}.pbf.gz"
+  ]
+}
